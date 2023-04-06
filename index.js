@@ -69,4 +69,34 @@ fetch('http://localhost:3000/medications')
     .then(res => res.json)
     .then(medications => console.log(medications))
   }
+
   
+// Get the reference to the form and attach the event listener for form submit
+const form = document.querySelector('#form');
+form.addEventListener('submit', handleSubmit);
+
+// Define the function that will be called when the form is submitted
+function handleSubmit(e){
+  e.preventDefault();
+  let medicationsObj = {
+    name:e.target.name.value,
+    image:e.target.picture.value,
+    description: e.target.description.value
+  }
+  console.log(medicationsObj)
+  addMedications(medicationsObj);
+}
+
+function addMedications(medicationsObj){
+  fetch('http://localhost:3000/medications', {
+    method: 'POST',
+    headers:{
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify(medicationsObj)
+  })
+  .then(res => res.json
+    ())
+    .then(medications => console.log(medications))
+    .catch(err => console.log(err));
+}
