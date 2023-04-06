@@ -1,0 +1,41 @@
+{
+    "medications": [
+      {
+        "id": 1,
+        "name": "Ibuprofen",
+        "type": "Pain reliever",
+        "picture": "https://images.theconversation.com/files/321639/original/file-20200319-22610-18gca3.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop"
+      },
+      {
+        "id": 2,
+        "name": "Lisinopril",
+        "type": "Blood pressure medication",
+        "picture": "https://www.simplymedsonline.co.uk/storage/products/5746/images/lisinopril-tablets-es-611654603352.png"
+      },
+      {
+        "id": 3,
+        "name": "Metformin",
+        "type": "Antidiabetic medication",
+        "picture": "https://www.poison.org/-/media/images/shared/articles/metformin.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Simvastatin",
+        "type": "Cholesterol-lowering medication",
+        "picture": "https://www.crescentpharma.com/wp-content/uploads/2016/01/Simvastatin-20mg-Tablets_28s-2.png"
+      },
+      {
+        "id": 5,
+        "name": "Amoxicillin",
+        "type": "Antibiotic",
+        "picture": "https://static.dw.com/image/64125277_605.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Prednisone",
+        "type": "Corticosteroid",
+        "picture": "https://www.kidney.org/sites/default/files/styles/newsletter_article_image__scale_width_to_630px_/public/Prednisone.jpg?itok=jiDqB850"
+      }
+      
+    ]
+  }
