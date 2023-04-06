@@ -7,6 +7,7 @@ fetch('http://localhost:3000/medications')
       const name = card.querySelector('h2');
       const type = card.querySelector('p');
       const button = card.querySelector('button');
+      let reminderTime = null;
 
       picture.src = data[index].picture;
       picture.alt = data[index].name;
@@ -14,11 +15,25 @@ fetch('http://localhost:3000/medications')
       type.textContent = data[index].type;
       button.textContent = 'Set Reminder';
       button.addEventListener('click', () => {
-        button.textContent = '\u{1F514}';
+        button.classList.toggle('reminder-set');
+        if (button.classList.contains('reminder-set')) {
+          button.innerHTML = '&#x1F514;';
+          reminderTime = new Date(Date.now() + 5000); // set reminder for 5 seconds from now
+          setInterval(() => {
+            const currentTime = new Date();
+            if (currentTime >= reminderTime) {
+              alert('Time to take your medicine');
+            }
+          }, 3000); // check time every 1 second
+        } else {
+          button.textContent = 'Set Reminder';
+          reminderTime = null;
+        }
       });
     });
   })
   .catch(error => console.error(error));
+
 
 
   fetch('http://localhost:3000/medications')
