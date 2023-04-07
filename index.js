@@ -24,7 +24,7 @@ fetch('http://localhost:3000/medications')
             if (currentTime >= reminderTime) {
               alert('Time to take your medicine');
             }
-          }, 3000); // check time every 1 second
+          }, 3000); // check time every 3 second
         } else {
           button.textContent = 'Set Reminder';
           reminderTime = null;
